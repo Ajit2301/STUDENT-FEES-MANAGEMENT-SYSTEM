@@ -1,0 +1,32 @@
+.invoice-container {
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: #f9f9f9;
+  }
+  
+  .invoice-header {
+    text-align: center;
+  }
+  
+  .invoice-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .invoice-details .student-info,
+  .invoice-details .payment-info {
+    flex: 1;
+  }
+  
+  .invoice-summary {
+    margin-top: 20px;
+  }
+  
+  .thank-you {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
