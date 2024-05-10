@@ -1,0 +1,16 @@
+.navbar
+{
+    background-color:#b948d9;
+}
+.container-fluid
+{
+    /* border: 2px solid red; */
+    color:whitesmoke;
+    font-weight: bold;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav-item
+{
+    color:red;
+}

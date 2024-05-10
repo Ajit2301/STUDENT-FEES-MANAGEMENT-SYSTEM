@@ -1,0 +1,22 @@
+.card {
+    background-color: transparent;
+    border: 3px solid transparent;
+    background-clip: padding-box; /* Clip background to the padding box */
+    border-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%) 1; /* Apply linear gradient to border */
+    border-radius: 20%;
+}
+.card-title
+{
+    color:orchid;
+    font-size: 25px;
+    font-weight: bolder ;
+}
+.card-text
+{
+    color:sandybrown;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.card-footer .btn{
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+}

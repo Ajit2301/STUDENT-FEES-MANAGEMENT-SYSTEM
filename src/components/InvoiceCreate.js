@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import GenerateInvoice from './GenerateInvoice'; 
 import Invoices from './Invoices';
+import "./InvoiceCreate.css"
 function InvoiceCreate() {
   const [sno, setSno] = useState('');
   const [sname, setSname] = useState('');
@@ -187,12 +188,12 @@ function InvoiceCreate() {
   }
   
   return (
-    <div>
+    <div className='container col-lg-3'>
       {invoiceGenerated ? (
         <GenerateInvoice {...invoiceData} />
       ) : (
-        <form>
-          <div className="form-group">
+        <form style={{ maxWidth: '300px' }}>
+          <div className="form-group justify-content-center mt-5">
             <label htmlFor="sno"><strong>Student ID:</strong></label>
             <input
               type="text"
@@ -290,10 +291,13 @@ function InvoiceCreate() {
                   <option value="cash">Cash</option>
                 </select>
               </div>
-              <button type="button" className="btn btn-primary" onClick={updateInvoice}>Update</button>
-              <button type="button" className="btn btn-primary" onClick={findAmountToBeCreated}>Find Amount to be Created</button>
-              <button type="button" className="btn btn-primary" onClick={createInvoice}>Create Invoice</button>
-              <button type="button" className="btn btn-primary" onClick={generateInvoice}>Generate Invoice</button>
+              <div className='mt-3 d-flex justify-content-between'>
+  <button type="button" className="btn btn-primary" onClick={updateInvoice}>Update</button>
+  <button type="button" className="btn btn-secondary" onClick={findAmountToBeCreated}>Find Amount to be Created</button>
+  <button type="button" className="btn btn-primary" onClick={createInvoice}>Create Invoice</button>
+  <button type="button" className="btn btn-primary" onClick={generateInvoice}>Generate Invoice</button>
+</div>
+
             </>
           )}
           <button type="button" className="btn btn-primary" onClick={findStudentData}>Find</button>

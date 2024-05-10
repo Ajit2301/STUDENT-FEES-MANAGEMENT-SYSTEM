@@ -24,7 +24,7 @@ function Login({ userType }) {
   };
 
   return (
-    <div className="container mt-5 d-flex flex-column align-items-center">
+    <div className="container  d-flex flex-column  justify-content-center align-items-center mt-5">
       <h1>Welcome Techies!!!</h1>
       {userType === 'student' ? <StudentLogin /> : <AdminLogin />}
       <div className="mt-3">

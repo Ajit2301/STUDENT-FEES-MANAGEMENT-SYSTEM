@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Axios from 'axios'; // Import Axios for making HTTP requests
+import "./AdminLogin.css"
 
 function AdminLogin() {
   const [username, setUsername] = useState('');
@@ -44,7 +45,7 @@ if (loggedIn) {
 
 return (
   <div className="row justify-content-center mt-5">
-    <div className="col-md-6">
+    <div className="col-md-3">
       <h2>Admin Login</h2>
       <form >
         <div className="mb-3">

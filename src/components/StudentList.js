@@ -233,6 +233,7 @@
 import { useState } from 'react';
 import Axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import "./StudentList.css";
 const coursesToFees = {
   "FULLSTACK WEB DEVELOPER-MERN":18000,
   "FULLSTACK WEB DEVELOPER-MEAN":19000,
@@ -289,7 +290,7 @@ const [dojYear, setDojYear] = useState('');
 
   const insert = () => {
     const formattedDob = `${dob}-${dobMonth}-${dobYear}`;
-    const formattedDoj = `${dob}-${dojMonth}-${dobYear}`;
+    const formattedDoj = `${doj}-${dojMonth}-${dojYear}`;
 
    
     Axios.get(`http://127.0.0.1:4002/api/insert`, {
@@ -319,8 +320,14 @@ const [dojYear, setDojYear] = useState('');
   };
 
   const update = () => {
+    const formattedDob = `${dob}-${dobMonth}-${dobYear}`;
+    console.log("update dob",formattedDob)
+    const formattedDoj = `${doj}-${dojMonth}-${dojYear}`;
+        console.log("update dob",formattedDoj)
+
     Axios.get(`http://127.0.0.1:4002/api/update`, {
-      params: { sno: sno, sname: sname,dob:parseInt(dob),doj:parseInt(doj),qualification:qualification,course:course,fees:parseInt(fees),state:state,address:address,email:email,contact: parseInt(contact) }
+      
+      params: { sno: sno, sname: sname,dob:formattedDob,doj:formattedDoj,qualification:qualification,course:course,fees:parseInt(fees),state:state,address:address,email:email,contact: parseInt(contact) }
     })
       .then((res) => {
         find();
@@ -362,16 +369,17 @@ const toggleEditMode = (item) => {
     setSno(item.sno);
     setSname(item.sname);
     
-    // Extract day, month, and year parts from DOB and DOJ and set the corresponding states
-    const dobParts = item.dob.split('-');
-    setDob(dobParts[2]); // Set day
-    setDobMonth(dobParts[1]); // Set month
-    setDobYear(dobParts[0]); // Set year
+    // Create new Date object for DOB
+    const dobDate = new Date(item.dob);
+    setDob(dobDate.getDate().toString()); // Set day
+    setDobMonth((dobDate.getMonth() + 1).toString()); // Set month (+1 because months are zero-indexed)
+    setDobYear(dobDate.getFullYear().toString()); // Set year
     
-    const dojParts = item.doj.split('-');
-    setDoj(dojParts[2]); // Set day
-    setDojMonth(dojParts[1]); // Set month
-    setDojYear(dojParts[0]); // Set year
+    // Create new Date object for DOJ
+    const dojDate = new Date(item.doj);
+    setDoj(dojDate.getDate().toString()); // Set day
+    setDojMonth((dojDate.getMonth() + 1).toString()); // Set month (+1 because months are zero-indexed)
+    setDojYear(dojDate.getFullYear().toString()); // Set year
     
     setQualification(item.qualification);
     setCourse(item.course);
@@ -386,7 +394,7 @@ const toggleEditMode = (item) => {
   }
 };
 
-  const handleCourseChange = (selectedCourse) => {
+const handleCourseChange = (selectedCourse) => {
     setCourse(selectedCourse);
     setFees(coursesToFees[selectedCourse]);
     const counter = courseCounters[selectedCourse] || 0;
@@ -434,14 +442,20 @@ const toggleEditMode = (item) => {
       ...prevCounters,
       [selectedCourse]: counter + 1,
     }));
+     setDob('');
+  setDobMonth('');
+  setDobYear('');
+  setDoj('');
+  setDojMonth('');
+  setDojYear('');
   };
   
   
   
   
   return (
-    <div className="container">
-      <h1 className="text-center mt-5">STUDENT  RECORDS</h1>
+    <div className="container ">
+      <h2 className="text-center mt-5">STUDENT  RECORDS</h2>
       <div className="row justify-content-center">
         <div className="col-md-6">
           <div className="mb-3">
@@ -555,8 +569,8 @@ const toggleEditMode = (item) => {
                 <tr key={item.sno}>
                   <td>{item.sno}</td>
                   <td>{item.sname}</td>
-                  <td>{item.dob}</td>
-                  <td>{item.doj}</td>
+                 <td>{`${item.dob}/${item.dobMonth}/${item.dobYear}`}</td>
+  <td>{`${item.doj}/${item.dojMonth}/${item.dojYear}`}</td>
                   <td>{item.qualification}</td>
                   <td>{item.course}</td>
                   <td>{item.fees}</td>

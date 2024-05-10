@@ -69,8 +69,8 @@ http.createServer(async (req, res) => {
         } else if (pathname === '/api/update') {
             const sno = query.sno; 
             const newSname = query.sname; // Assuming user provides the new sname
-            const newDob=parseInt(query.dob);
-            const newDoj=parseInt(query.doj);
+            const newDob=query.dob;
+            const newDoj=query.doj;
             const newQualification=query.qualification;
             const newCourse=query.course;
             const newFees =parseInt(query.fees);

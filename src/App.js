@@ -1,9 +1,13 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import "./App.css";
+import "./Header.css";
+import "./Login.css";
+import "./Signup.css";
 import Header from './components/Header';
 import AdminDashboard from './components/AdminDashBoard';
 import StudentLogin from './components/StudentLogin';
-import StudentList from "./components/StudentList"
+import StudentList from "./components/StudentList";
 import AdminLogin from './components/AdminLogin';
 import Login from './components/Login';
 import Signup from './components/Signup';
@@ -16,9 +20,9 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   return (
-    <div>
+    <div className="bg-image " >
       <Header />
-      <div className="container">
+      <div className="container ">
         <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/courses" element={<Courses />} />

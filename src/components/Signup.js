@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Axios from 'axios';
 import StudentLogin from './StudentLogin';
 import AdminLogin from './AdminLogin';
+import "./Signup.css";
 
 function SignupForm() {
   const [username, setUsername] = useState('');
@@ -80,8 +81,8 @@ function SignupForm() {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center">Sign Up</h2>
-      <form onSubmit={insert} className="mx-auto" style={{ maxWidth: '400px' }}>
+      <h2 className="text-center ">SignUp Form</h2>
+      <form onSubmit={insert} className="mx-auto" style={{ maxWidth: '300px' }}>
         <div className="mb-3">
           <label htmlFor="username" className="form-label"><strong>Username:</strong></label>
           <input
