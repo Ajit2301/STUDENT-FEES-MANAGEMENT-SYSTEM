@@ -25,11 +25,11 @@ function Login({ userType }) {
 
   return (
     <div className="container  d-flex flex-column  justify-content-center align-items-center mt-5">
-      <h1>Welcome Techies!!!</h1>
+       <h1 className="text-center mb-4">Welcome Techies!!!</h1>
       {userType === 'student' ? <StudentLogin /> : <AdminLogin />}
       <div className="mt-3">
-        <button className="btn btn-success me-2" onClick={handleStudentLogin}>Student Login</button>
-        <button className="btn btn-info me-2" onClick={handleAdminLogin}>Admin Login</button>
+        <button className="btn btn-success center me-2" onClick={handleStudentLogin}>Student Login</button>
+        <button className="btn btn-info  center me-2" onClick={handleAdminLogin}>Admin Login</button>
         {/* <span>Don't have an account? <button className="btn btn-secondary" onClick={handleSignup}>Signup</button></span> */}
       </div>
     </div>
