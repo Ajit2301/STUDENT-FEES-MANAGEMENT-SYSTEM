@@ -192,7 +192,7 @@ function InvoiceCreate() {
       {invoiceGenerated ? (
         <GenerateInvoice {...invoiceData} />
       ) : (
-        <form style={{ maxWidth: '300px' }}>
+        <form style={{ maxWidth: '700' }}>
           <div className="form-group justify-content-center mt-5">
             <label htmlFor="sno"><strong>Student ID:</strong></label>
             <input
@@ -207,7 +207,7 @@ function InvoiceCreate() {
           {isDataFound && (
             <>
               <div className="form-group">
-                <label htmlFor="sname">Student Name</label>
+                <label htmlFor="sname"><strong>Student Name</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -217,7 +217,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="course">Course</label>
+                <label htmlFor="course"><strong>Course</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -227,7 +227,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="fees">Fees</label>
+                <label htmlFor="fees"><strong>Fees</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -237,7 +237,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="payingAmount">Paying Amount</label>
+                <label htmlFor="payingAmount"><strong>Paying Amount</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -248,7 +248,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="paidAmount">Paid Amount</label>
+                <label htmlFor="paidAmount"><strong>Paid Amount</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -258,7 +258,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="remainingAmount">Remaining Amount</label>
+                <label htmlFor="remainingAmount"><strong>Remaining Amount</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -269,7 +269,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="currentDateTime">Current Date and Time</label>
+                <label htmlFor="currentDateTime"><strong>Current Date and Time</strong></label>
                 <input
                   type="text"
                   className="form-control"
@@ -279,7 +279,7 @@ function InvoiceCreate() {
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="paymentMethod">Payment Method</label>
+                <label htmlFor="paymentMethod"><strong>Payment Method</strong></label>
                 <select
                   className="form-control"
                   id="paymentMethod"
@@ -291,11 +291,11 @@ function InvoiceCreate() {
                   <option value="cash">Cash</option>
                 </select>
               </div>
-              <div className='mt-3 d-flex justify-content-between'>
-  <button type="button" className="btn btn-primary" onClick={updateInvoice}>Update</button>
-  <button type="button" className="btn btn-secondary" onClick={findAmountToBeCreated}>Find Amount to be Created</button>
-  <button type="button" className="btn btn-primary" onClick={createInvoice}>Create Invoice</button>
-  <button type="button" className="btn btn-primary" onClick={generateInvoice}>Generate Invoice</button>
+              <div className='mt-3 '>
+  <button type="button" className="btn btn-primary w-10 h-10 mx-2" onClick={updateInvoice}>Update</button><nbsp></nbsp>
+  <button type="button" className="btn btn-secondary mx-2" onClick={findAmountToBeCreated}>Paid Amount</button>
+  <button type="button" className="btn btn-success my-2" onClick={createInvoice}>Create Invoice</button>
+  <button type="button" className="btn btn-info mx-2" onClick={generateInvoice}>Generate Invoice</button>
 </div>
 
             </>

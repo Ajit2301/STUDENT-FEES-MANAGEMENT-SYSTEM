@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "./Header.css";
 function Header() {
+  
   return (
     <nav className="navbar navbar-expand-lg navbar-dark ">
       <div className="container-fluid  ">
@@ -22,7 +23,7 @@ function Header() {
               <Link className="nav-link dropdown-toggle" to="#" id="adminDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Admin Dashboard
               </Link>
-              <ul className="dropdown-menu" aria-labelledby="adminDropdown bg-primary">
+              <ul className="dropdown-menu" aria-labelledby="adminDropdown ">
                 <li><Link className="dropdown-item" to="/admin/studentList">StudentList</Link></li>
                 <li><Link className="dropdown-item" to="/admin/invoiceCreate">InvoiceCreate</Link></li>
                 <li><Link className="dropdown-item" to="/admin/invoicesfind">Invoices</Link></li>

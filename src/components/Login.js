@@ -21,7 +21,7 @@ function Login({ userType }) {
 
   const handleAdminLogin = () => {
     navigate('/login/admin');
-  };
+  }; 
 
   return (
     <div className="container  d-flex flex-column  justify-content-center align-items-center mt-5">

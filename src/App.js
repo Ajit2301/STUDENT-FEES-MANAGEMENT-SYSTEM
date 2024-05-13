@@ -18,6 +18,7 @@ import Invoices from './components/Invoices'
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+
 function App() {
   return (
     <div className="bg-image " >

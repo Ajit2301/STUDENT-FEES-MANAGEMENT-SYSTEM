@@ -1,0 +1,19 @@
+
+.navbar
+{
+    background-image: linear-gradient(120deg, #0843cc 0%, #f68084 100%);
+}
+.dropdown-menu
+{
+  background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+  color:whitesmoke;
+  }
+.dropdown-menu .dropdown-item
+{
+    color:whitesmoke;
+    font-weight: 500;
+}
+ .dropdown-menu .dropdown-item:hover
+{
+    background-color:#f68084;
+}
