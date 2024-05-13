@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/css/main.3eb56870.css",
-    "main.js": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/main.d6509207.js",
+    "main.css": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/css/main.a162eb99.css",
+    "main.js": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/main.7003cf8e.js",
     "static/js/213.5b231def.chunk.js": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/213.5b231def.chunk.js",
     "static/js/732.234f5a7a.chunk.js": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/732.234f5a7a.chunk.js",
     "static/js/453.ad7309c3.chunk.js": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/453.ad7309c3.chunk.js",
     "static/media/bg.png": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/media/bg.3792e7d1d43819d99377.png",
     "index.html": "/STUDENT-FEES-MANAGEMENT-SYSTEM/index.html",
-    "main.3eb56870.css.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/css/main.3eb56870.css.map",
-    "main.d6509207.js.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/main.d6509207.js.map",
+    "main.a162eb99.css.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/css/main.a162eb99.css.map",
+    "main.7003cf8e.js.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/main.7003cf8e.js.map",
     "213.5b231def.chunk.js.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/213.5b231def.chunk.js.map",
     "732.234f5a7a.chunk.js.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/732.234f5a7a.chunk.js.map",
     "453.ad7309c3.chunk.js.map": "/STUDENT-FEES-MANAGEMENT-SYSTEM/static/js/453.ad7309c3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eb56870.css",
-    "static/js/main.d6509207.js"
+    "static/css/main.a162eb99.css",
+    "static/js/main.7003cf8e.js"
   ]
 }
