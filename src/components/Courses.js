@@ -15,7 +15,7 @@ function Courses() {
     return (
         <div className="container mt-5">
             <h2 className="text-center mb-4 animate__animated animate__bounceIn">Available Courses</h2>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 animate__animated animate__backInDown animate__delay-1s">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 animate__animated animate__backInUp animate__delay-1s">
                 {courses.map((course, index) => (
                     <div className="col " key={index}>
                         <div className="card h-100  shadow-sm ">
