@@ -51,22 +51,22 @@ function StudentLogin() {
   return (
     <div className="row justify-content-center mt-5">
       <div className="col-md-3">
-        <h2>Student Login</h2>
+        <h2 className='animate__animated animate__bounceIn'>Student Login</h2>
         <form style={{ maxWidth: '300px' }}>
-          <div className="mb-3">
+          <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
             <label htmlFor="username" className="form-label"><strong>Username:</strong></label>
             <input type="text" className="form-control" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />
           </div>
-          <div className="mb-3">
+          <div className="mb-3 animate__animated animate__backInLeft animate__delay-1s">
             <label htmlFor="password" className="form-label"><strong>Password:</strong></label>
             <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
-          <button type="submit" className="btn btn-primary" onClick={login}>Login</button>
+          <button type="submit" className="btn btn-primary animate__animated animate__backInLeft animate__delay-2s" onClick={login}>Login</button>
           {error && <div className="text-danger mt-2">{error}</div>}
           {/* Add links to admin login and signup */}
           <div className="mt-3">
-            <Link to="/login/admin" className="btn btn-success me-2">Admin Login</Link>
-            <Link to="/signup" className="btn btn-info me-2">Signup</Link>
+            <Link to="/login/admin" className="btn btn-success me-2 animate__animated animate__backInLeft animate__delay-3s">Admin Login</Link>
+            <Link to="/signup" className="btn btn-info me-2 animate__animated animate__backInRight animate__delay-4s">Signup</Link>
           </div>
         </form>
       </div>

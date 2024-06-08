@@ -1,6 +1,7 @@
 const { MongoClient } = require('mongodb');
 
 // Replace the connection string with your MongoDB Atlas connection string
+// const uri = "mongodb+srv://akajith2243:5f1NpHCisJS9YIj9@cluster0.cv8txfh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 const uri = "mongodb+srv://akajith2243:5f1NpHCisJS9YIj9@cluster0.cv8txfh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
 
 const client = new MongoClient(uri);
@@ -36,7 +37,7 @@ connectClient()
 
 async function login(username, password) {
     try {
-        const users = await client.db("STUDENT").collection("signup").find({ username, password }).toArray();
+        const users = await client.db("aks").collection("signup").find({ username, password }).toArray();
         if (users.length > 0) {
             return { success: true, message: "Login successful", users };
         } else {

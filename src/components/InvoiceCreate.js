@@ -22,7 +22,7 @@ function InvoiceCreate() {
 
   useEffect(() => {
     getCurrentDateTime();
-    generateInvoiceNum();
+    generateInvoiceNum(); 
   }, []);
 
   const getCurrentDateTime = () => {
@@ -188,12 +188,14 @@ function InvoiceCreate() {
   }
   
   return (
-    <div className='container col-lg-3'>
+    <div className='row justify-content-center  animate__animated animate__bounceIn'>
+      <h2 className="text-center mt-5 animate__animated animate__bounceIn">CREATE INVOICES</h2>
+      <div className="col-md-6">
       {invoiceGenerated ? (
         <GenerateInvoice {...invoiceData} />
       ) : (
         <form style={{ maxWidth: '700' }}>
-          <div className="form-group justify-content-center mt-5">
+          <div className=" mb-3 animate__animated animate__backInLeft animate__delay-1s">
             <label htmlFor="sno"><strong>Student ID:</strong></label>
             <input
               type="text"
@@ -206,7 +208,7 @@ function InvoiceCreate() {
           </div>
           {isDataFound && (
             <>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="sname"><strong>Student Name</strong></label>
                 <input
                   type="text"
@@ -216,7 +218,7 @@ function InvoiceCreate() {
                   disabled
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="course"><strong>Course</strong></label>
                 <input
                   type="text"
@@ -226,7 +228,7 @@ function InvoiceCreate() {
                   disabled
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="fees"><strong>Fees</strong></label>
                 <input
                   type="text"
@@ -236,18 +238,18 @@ function InvoiceCreate() {
                   disabled
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="payingAmount"><strong>Paying Amount</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control animate__animated animate__backInRight animate__delay-1s"
                   id="payingAmount"
                   placeholder="Enter paying amount"
                   value={payingAmount}
                   onChange={(e) => updateRemainingAmount(e.target.value)}
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="paidAmount"><strong>Paid Amount</strong></label>
                 <input
                   type="text"
@@ -257,7 +259,7 @@ function InvoiceCreate() {
                   disabled
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="remainingAmount"><strong>Remaining Amount</strong></label>
                 <input
                   type="text"
@@ -268,7 +270,7 @@ function InvoiceCreate() {
                   onChange={(e) => setRemainingAmount(e.target.value)}
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="currentDateTime"><strong>Current Date and Time</strong></label>
                 <input
                   type="text"
@@ -278,7 +280,7 @@ function InvoiceCreate() {
                   disabled
                 />
               </div>
-              <div className="form-group">
+              <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="paymentMethod"><strong>Payment Method</strong></label>
                 <select
                   className="form-control"
@@ -291,16 +293,16 @@ function InvoiceCreate() {
                   <option value="cash">Cash</option>
                 </select>
               </div>
-              <div className='mt-3 '>
-  <button type="button" className="btn btn-primary w-10 h-10 mx-2" onClick={updateInvoice}>Update</button><nbsp></nbsp>
-  <button type="button" className="btn btn-secondary mx-2" onClick={findAmountToBeCreated}>Paid Amount</button>
-  <button type="button" className="btn btn-success my-2" onClick={createInvoice}>Create Invoice</button>
-  <button type="button" className="btn btn-info mx-2" onClick={generateInvoice}>Generate Invoice</button>
+              <div className='mb-3 animate__animated animate__backInLeft animate__delay-1s'>
+  <button type="button" className="btn btn-primary w-10 h-10 mx-2" onClick={updateInvoice}>Update</button>
+  <button type="button" className="btn btn-secondary w-10 h-10 mx-2" onClick={findAmountToBeCreated}>Paid Amount</button>
+  <button type="button" className="btn btn-success w-10 h-10 my-2" onClick={createInvoice}>Create Invoice</button>
+  <button type="button" className="btn btn-info w-10 h-10 mx-2" onClick={generateInvoice}>Generate Invoice</button>
 </div>
 
             </>
           )}
-          <button type="button" className="btn btn-primary" onClick={findStudentData}>Find</button>
+          <button type="button" className="btn btn-primary w-10 h-10 mx-2 animate__animated animate__backInRight animate__delay-2s" onClick={findStudentData}>Find</button>
           {showInvoiceNumInput && ( // Conditionally render invoice num input
             <div className="form-group">
               <label htmlFor="invoiceNum">Invoice Number</label>
@@ -315,6 +317,7 @@ function InvoiceCreate() {
           )}
         </form>
       )}
+    </div>
     </div>
   );
 }

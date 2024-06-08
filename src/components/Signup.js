@@ -81,10 +81,10 @@ function SignupForm() {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center ">SignUp Form</h2>
+      <h2 className="text-center animate__animated animate__bounceIn ">SignUp Form</h2>
       <form onSubmit={insert} className="mx-auto" style={{ maxWidth: '300px' }}>
-        <div className="mb-3">
-          <label htmlFor="username" className="form-label"><strong>Username:</strong></label>
+        <div className="mb-3 animate__animated animate__backInLeft animate__delay-1s">
+          <label htmlFor="username" className="form-label "><strong>Username:</strong></label>
           <input
             type="text"
             className="form-control"
@@ -93,8 +93,8 @@ function SignupForm() {
             onChange={handleUsernameChange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="email" className="form-label"><strong>Email:</strong></label>
+        <div className="mb-3 animate__animated animate__backInLeft animate__delay-1s">
+          <label htmlFor="email" className="form-label animate__animated animate__backInLeft animate__delay-1s"><strong>Email:</strong></label>
           <input
             type="email"
             className="form-control"
@@ -103,7 +103,7 @@ function SignupForm() {
             onChange={handleEmailChange}
           />
         </div>
-        <div className="mb-3">
+        <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
           <label htmlFor="password" className="form-label"><strong>Password:</strong></label>
           <input
             type="password"
@@ -113,8 +113,8 @@ function SignupForm() {
             onChange={handlePasswordChange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="confirmPassword" className="form-label"><strong>Confirm Password:</strong></label>
+        <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
+          <label htmlFor="confirmPassword" className="form-label "><strong>Confirm Password:</strong></label>
           <input
             type="password"
             className="form-control"
@@ -123,8 +123,8 @@ function SignupForm() {
             onChange={handleConfirmPasswordChange}
           />
         </div>
-        <div className="mb-3">
-          <label htmlFor="userType" className="form-label"><strong>User Type:</strong></label>
+        <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
+          <label htmlFor="userType" className="form-label "><strong>User Type:</strong></label>
           <select
             className="form-control"
             id="userType"
@@ -137,7 +137,7 @@ function SignupForm() {
         </div>
         {passwordError && <div className="text-danger">{passwordError}</div>}
         {formError && <div className="text-danger">{formError}</div>}
-        <button type="submit" className="btn btn-primary d-block mx-auto">Sign Up</button>
+        <button type="submit" className="btn btn-primary d-block mx-auto animate__animated animate__backInUp animate__delay-2s">Sign Up</button>
       </form>
     </div>
   );

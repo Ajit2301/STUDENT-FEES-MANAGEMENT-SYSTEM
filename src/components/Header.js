@@ -5,8 +5,8 @@ function Header() {
   
   return (
     <nav className="navbar navbar-expand-lg navbar-dark ">
-      <div className="container-fluid  ">
-        STUDENTS FEES MANAGEMENT SYSTEM
+      <div className="container-fluid">
+       <h4 className=" animate__animated animate__pulse animate__infinite">STUDENTS FEES MANAGEMENT SYSTEM</h4> 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>

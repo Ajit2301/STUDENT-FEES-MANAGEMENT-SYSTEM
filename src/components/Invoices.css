@@ -1,0 +1,14 @@
+p
+{
+    color:violet;
+}
+h3{
+    color:blanchedalmond;
+}
+.card-title{
+    color:aliceblue;
+}
+.form-control::placeholder {
+    color: #999; /* Change to your desired placeholder color */
+    opacity: 1; /* Ensure the color is fully applied */
+  }

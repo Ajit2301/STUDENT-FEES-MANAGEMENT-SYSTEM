@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
     padding: 10,
     flexGrow: 1,
   },
+  
 });
 
 // PDF Invoice Component

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import 'animate.css';
 // Student login component
 function StudentLogin() {
   // Add your student login logic here
@@ -24,12 +24,12 @@ function Login({ userType }) {
   }; 
 
   return (
-    <div className="container  d-flex flex-column  justify-content-center align-items-center mt-5">
+    <div className="container1  d-flex flex-column  justify-content-center align-items-center mt-5">
        <h1 className="text-center mb-4">Welcome Techies!!!</h1>
       {userType === 'student' ? <StudentLogin /> : <AdminLogin />}
       <div className="mt-3">
-        <button className="btn btn-success center me-2" onClick={handleStudentLogin}>Student Login</button>
-        <button className="btn btn-info  center me-2" onClick={handleAdminLogin}>Admin Login</button>
+        <button className="btn btn-success center me-2 animate__animated animate__backInLeft  animate__delay-3s" onClick={handleStudentLogin}>Student Login</button>
+        <button className="btn btn-info  center me-2 animate__animated animate__backInRight  animate__delay-3s" onClick={handleAdminLogin}>Admin Login</button>
         {/* <span>Don't have an account? <button className="btn btn-secondary" onClick={handleSignup}>Signup</button></span> */}
       </div>
     </div>

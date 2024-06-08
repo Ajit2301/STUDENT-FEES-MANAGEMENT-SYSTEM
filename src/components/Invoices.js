@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import html2pdf from 'html2pdf.js';
+import "./Invoices.css";
 import Axios from 'axios';
 
 function Invoices() {
@@ -32,10 +33,10 @@ function Invoices() {
 
     return (
         <div className="container mt-5">
-            <h1 className="text-center mb-4">Invoices</h1>
+            <h2 className="text-center mb-4 animate__animated animate__bounceIn">INVOICES</h2>
             <div className="row justify-content-center">
-                <div className="col-md-8">
-                    <div className="input-group mb-3">
+                <div className="col-md-8 animate__animated animate__backInRight animate__delay-1s">
+                    <div className="input-group mb-3 ">
                         <input
                             type="text"
                             className="form-control"
@@ -43,24 +44,24 @@ function Invoices() {
                             value={invoiceNum}
                             onChange={(e) => setInvoiceNum(e.target.value)}
                         />
-                        <button className="btn btn-primary" type="button" onClick={findInvoice}>Find Invoice</button>
+                        <button className="btn btn-primary mx-2 animate__animated animate__backInRight animate__delay-2s" type="button" onClick={findInvoice}>Find Invoice</button>
                     </div>
                 </div>
             </div>
             {invoiceData && invoiceData.invoice && invoiceData.invoice.length > 0 && (
-                <div className="row justify-content-center">
+                <div className="row justify-content-center animate__animated animate__backInUp animate__delay-1s">
                     <div className="col-md-8">
                         <div className="card">
                             <div className="card-header bg-primary text-white">
-                                <h2 className="card-title">Generated Invoice</h2>
+                                <h2 className="card-title">STUDENT FEES PAYMENT INVOICE</h2>
                             </div>
                             <div className="card-body" id="invoice">
                                 <div className="row mb-3">
                                     <div className="col-md-6">
-                                        <strong>Invoice Number:</strong> {invoiceData.invoice[0].invoiceNum}
+                                       <p> <strong>Invoice Number:</strong> {invoiceData.invoice[0].invoiceNum}</p>
                                     </div>
                                     <div className="col-md-6 text-md-end">
-                                        <strong>Date:</strong> {invoiceData.invoice[0].currentDateTime}
+                                        <p><strong>Date:</strong> {invoiceData.invoice[0].currentDateTime}</p>
                                     </div>
                                 </div>
                                 <hr />
@@ -99,7 +100,7 @@ function Invoices() {
             )}
             <div className="row justify-content-center mt-4">
                 <div className="col-md-8">
-                    <button className="btn btn-primary" onClick={downloadInvoice}>Download Invoice</button>
+                    <button className="btn btn-primary animate__animated animate__backInLeft animate__delay-3s" onClick={downloadInvoice}>Download Invoice</button>
                 </div>
             </div>
         </div>

@@ -14,17 +14,17 @@ function Courses() {
 
     return (
         <div className="container mt-5">
-            <h2 className="text-center mb-4">Available Courses</h2>
-            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <h2 className="text-center mb-4 animate__animated animate__bounceIn">Available Courses</h2>
+            <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 animate__animated animate__backInDown animate__delay-1s">
                 {courses.map((course, index) => (
-                    <div className="col" key={index}>
-                        <div className="card h-100  shadow-sm">
+                    <div className="col " key={index}>
+                        <div className="card h-100  shadow-sm ">
                             <div className="card-body">
                                 <h5 className="card-title  mb-3">{course.name}</h5>
                                 <p className="card-text ">Fees: ₹{course.fees} </p>
                             </div>
                             <div className="card-footer border-0 bg-transparent">
-                                <Link to="/signup" className="btn  w-30">Enroll Now</Link>
+                                <Link to="/signup" className="btn  w-30 animate__animated animate__heartBeat animate__delay-3s">Enroll Now</Link>
                                 {/* Use Link from react-router-dom to navigate to Signup component */}
                             </div>
                         </div>

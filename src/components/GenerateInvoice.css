@@ -29,4 +29,7 @@
     margin-top: 20px;
     text-align: center;
   }
-  
+  .form-control::placeholder {
+    color: #999; /* Change to your desired placeholder color */
+    opacity: 1; /* Ensure the color is fully applied */
+  }

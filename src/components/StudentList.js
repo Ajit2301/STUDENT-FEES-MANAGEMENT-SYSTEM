@@ -455,8 +455,8 @@ const handleCourseChange = (selectedCourse) => {
   
   return (
     <div className="container ">
-      <h2 className="text-center mt-5">STUDENT  RECORDS</h2>
-      <div className="row justify-content-center">
+      <h2 className="text-center mt-5 animate__animated animate__bounceIn">STUDENT  RECORDS</h2>
+      <div className="row justify-content-center animate__animated animate__backInLeft animate__delay-1s">
         <div className="col-md-6">
           <div className="mb-3">
             <label htmlFor="sno" className="form-label"><strong>SNO</strong></label>
