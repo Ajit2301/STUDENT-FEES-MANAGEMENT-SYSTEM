@@ -26,7 +26,7 @@ function Login({ userType }) {
 
   return (
     <div className="container1  d-flex flex-column  justify-content-center align-items-center mt-5">
-       <h2 className="text-center mb-4">Welcome Techies!!!</h2>
+       <h1 className="text-center mb-4">Welcome Techies!!!</h1>
       {userType === 'student' ? <StudentLogin /> : <AdminLogin />}
       <div className="mt-3">
         <button className="btn btn-success center me-2 animate__animated animate__backInLeft  animate__delay-3s" onClick={handleStudentLogin}>Student Login</button>
