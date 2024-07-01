@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'animate.css';
+import "./Login.css";
 // Student login component
 function StudentLogin() {
   // Add your student login logic here
