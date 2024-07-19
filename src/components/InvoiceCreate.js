@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import GenerateInvoice from './GenerateInvoice'; 
-import Invoices from './Invoices';
 import "./InvoiceCreate.css"
 function InvoiceCreate() {
   const [sno, setSno] = useState('');

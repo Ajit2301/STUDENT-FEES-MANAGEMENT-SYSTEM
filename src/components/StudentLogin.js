@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-import Axios from 'axios'; // Import Axios for making HTTP requests
+import Axios from 'axios'; 
 import "./StudentLogin.css";
 function StudentLogin() {
   const [username, setUsername] = useState('');
