@@ -49,10 +49,10 @@ function GenerateInvoice({invoiceNum, sno, sname, course, fees, payingAmount, pa
                         <div className="card-body">
                             <div className="row mb-3">
                                 <div className="col-md-6">
-                                    <strong>Invoice Number:</strong> {invoiceNum}
+                                   <p> <strong>Invoice Number:</strong> {invoiceNum}</p>
                                 </div>
                                 <div className="col-md-6 text-md-end">
-                                    <strong>Date:</strong> {currentDateTime}
+                                    <p><strong>Date:</strong> {currentDateTime}</p>
                                 </div>
                             </div>
                             <hr />

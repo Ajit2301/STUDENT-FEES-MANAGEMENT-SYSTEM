@@ -212,30 +212,30 @@ function InvoiceCreate() {
                 <label htmlFor="sname"><strong>Student Name</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="sname"
                   value={sname}
-                  disabled
+                
                 />
               </div>
               <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
-                <label htmlFor="course"><strong>Course</strong></label>
+                <label htmlFor="course" ><strong>Course</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="course"
                   value={course}
-                  disabled
+                
                 />
               </div>
               <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="fees"><strong>Fees</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="fees"
                   value={fees}
-                  disabled
+                  
                 />
               </div>
               <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
@@ -253,20 +253,20 @@ function InvoiceCreate() {
                 <label htmlFor="paidAmount"><strong>Paid Amount</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="paidAmount"
                   value={paidAmount}
-                  disabled
+                
                 />
               </div>
               <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="remainingAmount"><strong>Remaining Amount</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="remainingAmount"
                   value={remainingAmount}
-                  disabled
+                  
                   onChange={(e) => setRemainingAmount(e.target.value)}
                 />
               </div>
@@ -274,16 +274,16 @@ function InvoiceCreate() {
                 <label htmlFor="currentDateTime"><strong>Current Date and Time</strong></label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control transparent-disabled-input"
                   id="currentDateTime"
                   value={currentDateTime}
-                  disabled
+                  
                 />
               </div>
               <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
                 <label htmlFor="paymentMethod"><strong>Payment Method</strong></label>
                 <select
-                  className="form-control"
+                  className="form-control transparent-select "
                   id="paymentMethod"
                   value={paymentMethod}
                   onChange={(e) => setPaymentMethod(e.target.value)}

@@ -17,3 +17,17 @@ margin-top: 10px;
     color:whitesmoke;
     font-weight: bolder;
 }
+.transparent-select {
+  background-color: transparent;
+  color: #495057; /* Ensure the text color is visible */
+  border: 1px solid #ced4da; /* Keep the border visible */
+  padding-right: 30px; /* Add some padding to avoid text overlaying the arrow */
+  -webkit-appearance: none; /* Remove default styling on Webkit browsers */
+  -moz-appearance: none; /* Remove default styling on Firefox */
+  appearance: none; /* Remove default styling */
+}
+
+.transparent-select option {
+  background-color: transparent; /* Set option background color */
+  color: black; /* Set the text color for options */
+}

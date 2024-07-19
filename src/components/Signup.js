@@ -126,13 +126,13 @@ function SignupForm() {
         <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
           <label htmlFor="userType" className="form-label "><strong>User Type:</strong></label>
           <select
-            className="form-control"
+            className="form-control  transparent-select"
             id="userType"
             value={userType}
             onChange={handleUserTypeChange}
           >
-            <option value="student">Student</option>
-            <option value="admin">Admin</option>
+            <option  className="form-control-transparent-input"value="student">Student</option>
+            <option  className="form-control-transparent-input"value="admin">Admin</option>
           </select>
         </div>
         {passwordError && <div className="text-danger">{passwordError}</div>}
