@@ -47,7 +47,7 @@ return (
   <div className="row justify-content-center mt-5 ">
     <div className="col-md-3 ">
       <h2 className=" animate__animated animate__bounceIn">Admin Login</h2>
-      <form >
+      <form style={{ maxWidth: '300px' }} >
         <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
           <label htmlFor="username" className="form-label"><strong>Username:</strong></label>
           <input type="text" className="form-control" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required />

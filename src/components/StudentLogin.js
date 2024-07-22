@@ -51,7 +51,7 @@ function StudentLogin() {
   return (
     <div className="row justify-content-center mt-5">
       <div className="col-md-3">
-        <h2 className='animate__animated animate__bounceIn'>Student Login</h2>
+        <h2 className='  animate__animated animate__bounceIn mt-5 '>Student Login</h2>
         <form style={{ maxWidth: '300px' }}>
           <div className="mb-3 animate__animated animate__backInRight animate__delay-1s">
             <label htmlFor="username" className="form-label"><strong>Username:</strong></label>
